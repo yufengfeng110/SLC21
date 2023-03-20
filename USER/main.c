@@ -80,7 +80,15 @@ void BackGround_task(void *pvParameters);
 TaskHandle_t OTAupgrade_Handler;
 //任务函数
 void OTAupgrade_task(void *pvParameters);
-
+/**************存储策略任务****************/
+//任务优先级
+#define Savestrategy_TASK_PRIO 7
+//任务堆栈大小
+#define Savestrategy_TASK_SIZE 100
+//任务句柄
+TaskHandle_t Savestrategy_Handler;
+//任务函数
+void Savestrategy_task(void *pvParameters);
                                      
 
 IcapDevObj			gl_IcapDevObj;
